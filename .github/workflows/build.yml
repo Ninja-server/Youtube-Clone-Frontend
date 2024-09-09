@@ -12,11 +12,7 @@ jobs:
    - name: Install npm packages
      run: | 
        sudo apt-get update -y
-       sudo apt install npm -y
-   - name: Build the npm packages
-     run: | 
-       cd Youtube-Clone-Frontend 
-       cd frontend 
+       sudo apt install npm -y 
        npm install
        npm test
        npm build 
