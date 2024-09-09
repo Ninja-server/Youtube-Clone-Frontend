@@ -13,5 +13,9 @@ jobs:
      run: | 
        sudo apt-get update -y
        sudo apt install npm -y
-      
+   - name: Build the npm packages
+     run: | 
+       npm install
+       npm test
+       npm build 
         
