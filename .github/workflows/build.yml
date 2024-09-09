@@ -12,5 +12,6 @@ jobs:
    - name: Install npm packages
      run: | 
        sudo apt-get update -y
-       sudo apt install npm install -y
+       sudo apt install npm -y
+      
         
