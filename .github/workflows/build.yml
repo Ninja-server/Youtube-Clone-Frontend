@@ -15,7 +15,8 @@ jobs:
        sudo apt install npm -y
    - name: Build the npm packages
      run: | 
-       cd Youtube-Clone-Frontend && cd frontend 
+       cd Youtube-Clone-Frontend 
+       cd frontend 
        npm install
        npm test
        npm build 
