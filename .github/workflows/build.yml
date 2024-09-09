@@ -1,0 +1,16 @@
+name: Deploy the clone project in docker app
+on: 
+ push: 
+  branches: 
+    - dev: 
+jobs: 
+ build: 
+  runs-on: self-hosted
+  steps:
+   - name: Get Code
+     uses: actions/checkout@v4
+   - name: Install npm packages
+     run: | 
+       sudo apt-get update -y
+       sudo apt install npm install -y
+        
