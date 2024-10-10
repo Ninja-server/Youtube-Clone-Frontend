@@ -1,0 +1,32 @@
+name: React-project
+on: [push, workflow_dispatch]
+jobs: 
+  first-job: 
+    runs-on: self-hosted
+    steps: 
+      - name: Git-checkout
+        uses: actions/checkout@v4
+      - name: Node Installation
+        uses: actions/setup-node@v4
+        with: 
+         node-version: 18
+      - name: npm installation
+        run: | 
+          sudo apt-get update -y
+          npm install
+      - name: Test the code
+        run: | 
+          npm run build
+          npm test
+      - name: setup-docker
+        uses: crazy-max/ghaction-setup-docker@v3
+        with:
+          daemon-config: |
+            {
+              "debug": true,
+              "features": {
+                "containerd-snapshotter": true
+              }
+            }
+
+
