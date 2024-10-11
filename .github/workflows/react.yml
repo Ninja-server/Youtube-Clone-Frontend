@@ -18,8 +18,13 @@ jobs:
     - name: Install dependencies
       run: | 
        npm install
+       cd frontend
        npm run build
+       cd frontend
        npm run test
+       cd frontend
+    - name: Navigate to frontend directory
+      run:  cd frontend
     - name: Setup docker
       uses: docker/setup-buildx-action@v3
     - name: login to dockerhub
