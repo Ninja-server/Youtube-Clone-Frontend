@@ -10,7 +10,7 @@ jobs:
     - name: Gitcheckout
       uses: actions/checkout@v4
     - name: List repository contents
-      run: ls -R
+      run: pwd
     - name: setup node
       uses: actions/setup-node@v4
       with: 
