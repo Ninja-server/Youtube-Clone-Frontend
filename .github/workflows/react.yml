@@ -42,15 +42,6 @@ jobs:
        cd /home/ubuntu/actions-runner/_work/Youtube-Clone-Frontend/Youtube-Clone-Frontend/frontend
       working-directory:  frontend
     - name: Build dockerfile and upload in  dockerhub
-      uses: docker/build-push-action@v6
-      working-directory: Dockerfile
-      with:
-        context: .
-        push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/reactapp:${{ github.sha }}
-    - name: Deploy the app in docker
-      run: |
-        docker run -itd --name react-app-server -p 3000:3000 ${{ secrets.DOCKER_USERNAME }}/reactapp:${{ github.sha }}
-        docker images
-        docker ps
-       
+      run: | 
+        cd /home/ubuntu/actions-runner/_work/Youtube-Clone-Frontend/Youtube-Clone-Frontend/frontend/Dockerfile
+        docker build -t reactapp:v1 .
