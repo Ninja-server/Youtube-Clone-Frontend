@@ -9,8 +9,6 @@ jobs:
    steps: 
      - name: Git checkout
        uses: actions/checkout@v4
-     - name: Change the directory
-       run: cd /frontend
      - name: setup docker buildx
        uses: docker/setup-buildx-action@v1
      - name: login to docker
