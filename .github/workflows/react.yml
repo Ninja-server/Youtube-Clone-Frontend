@@ -9,8 +9,8 @@ jobs:
   steps: 
     - name: Gitcheckout
       uses: actions/checkout@v4
-    - name: Navigate to frontend directory
-      run:  cd frontend
+    - name: List repository contents
+      run: ls -R
     - name: setup node
       uses: actions/setup-node@v4
       with: 
