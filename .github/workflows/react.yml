@@ -43,6 +43,7 @@ jobs:
       working-directory:  frontend
     - name: Build dockerfile and upload in  dockerhub
       uses: docker/build-push-action@v6
+      working-directory: Dockerfile
       with:
         context: .
         push: true
