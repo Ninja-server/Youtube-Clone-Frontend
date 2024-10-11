@@ -23,6 +23,7 @@ jobs:
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
     - name: change to frontend directory
+      run: cd frontend
       working-directory: frontend
     - name: Build dockerfile and upload in  dockerhub
       uses: docker/build-push-action@v6
