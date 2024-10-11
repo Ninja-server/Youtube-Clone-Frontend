@@ -23,8 +23,8 @@ jobs:
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
     - name: change to frontend directory
-      run: cd frontend
-      working-directory: frontend
+      run:  cd /home/runner/work/Youtube-Clone-Frontend/Youtube-Clone-Frontend
+      working-directory: Youtube-Clone-Frontend
     - name: Build dockerfile and upload in  dockerhub
       uses: docker/build-push-action@v6
       with: 
