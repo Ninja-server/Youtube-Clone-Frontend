@@ -37,8 +37,8 @@ jobs:
       run:  ls -R
     - name: Change to the directory
       run: | 
-       cd /home/ubuntu/actions-runner/_work/Youtube-Clone-Frontend/Youtube-Clone-Frontend
-      working-directory:  Youtube-Clone-Frontend/frontend
+       cd /home/ubuntu/actions-runner/_work/Youtube-Clone-Frontend/Youtube-Clone-Frontend/frontend
+      working-directory:  frontend
     - name: Build dockerfile and upload in  dockerhub
       uses: docker/build-push-action@v6
       with:
