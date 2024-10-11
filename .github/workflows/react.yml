@@ -10,7 +10,9 @@ jobs:
     - name: Gitcheckout
       uses: actions/checkout@v4
     - name: to check the path for a directory
-      run: pwd
+      run: | 
+        pwd
+        sudo apt-get update -y
     - name: setup node
       uses: actions/setup-node@v4
       with:
