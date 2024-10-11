@@ -43,5 +43,7 @@ jobs:
       working-directory:  frontend
     - name: Build dockerfile and upload in  dockerhub
       run: | 
-        cd /home/ubuntu/actions-runner/_work/Youtube-Clone-Frontend/Youtube-Clone-Frontend/frontend/Dockerfile
+        cd /home/ubuntu/actions-runner/_work/Youtube-Clone-Frontend/Youtube-Clone-Frontend/frontend
         docker build -t reactapp:v1 .
+      working-directory: frontend
+        
